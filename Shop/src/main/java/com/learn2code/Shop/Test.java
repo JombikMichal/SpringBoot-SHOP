@@ -11,6 +11,6 @@ public class Test {
 
     public Test(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
-        this.jdbcTemplate.execute("select * from customer");
+        this.jdbcTemplate.execute("SELECT * FROM customer");
     }
 }
