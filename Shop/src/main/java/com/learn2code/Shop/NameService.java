@@ -22,8 +22,9 @@ public class NameService {
 
     //keby sme to chceli vypisat priamo v konstruktore tak nam vrati hodnotu null lebo sa este nenacitala hodnota @Value("${name}")
     // pomocou anotacie @PostConstruct povieme ze az po nacitani konfiguracie a beanov ju chceme spustit
+
     @PostConstruct
     private void sayMyName(){
-        System.out.println(name + " " + age);
+        System.out.println(this.name + " " + this.age);
     }
 }

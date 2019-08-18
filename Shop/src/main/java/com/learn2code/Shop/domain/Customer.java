@@ -21,6 +21,8 @@ public class Customer {
     @Nullable
     private String phoneNumber;
 
+    //preco je potrebne explicitne vytvorit bezparametricky konstruktor - chapem ze ked sme spravili parametricky konstruktor tak sa nam implicitne uz nevytvori bezparametricky ale naco na to neskor bude?
+    //robi sa to kvoli testom?
     public Customer() {
     }
 
@@ -38,9 +40,7 @@ public class Customer {
         return id;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
 
     public String getSurname() {
         return surname;
@@ -60,9 +60,7 @@ public class Customer {
     }
 
     @Nullable
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
+    public String getPhoneNumber() { return phoneNumber; }
 
     public void setId(@Nullable Integer id) {
         this.id = id;

@@ -34,25 +34,6 @@ public class Product {
         this.createdAt = Timestamp.from(Instant.now());
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Product product = (Product) o;
-        return merchant_id == product.merchant_id &&
-                Double.compare(product.price, price) == 0 &&
-                available == product.available &&
-                Objects.equals(id, product.id) &&
-                Objects.equals(name, product.name) &&
-                Objects.equals(description, product.description) &&
-                Objects.equals(createdAt, product.createdAt);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, merchant_id, name, description, price, createdAt, available);
-    }
-
     public void setId(@Nullable Integer id) {
         this.id = id;
     }
@@ -108,5 +89,26 @@ public class Product {
 
     public int getAvailable() {
         return available;
+    }
+
+
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Product product = (Product) o;
+        return merchant_id == product.merchant_id &&
+                Double.compare(product.price, price) == 0 &&
+                available == product.available &&
+                Objects.equals(id, product.id) &&
+                Objects.equals(name, product.name) &&
+                Objects.equals(description, product.description) &&
+                Objects.equals(createdAt, product.createdAt);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, merchant_id, name, description, price, createdAt, available);
     }
 }

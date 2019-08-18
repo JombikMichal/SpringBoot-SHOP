@@ -23,22 +23,6 @@ public class Merchant {
         this.address = address;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Merchant merchant = (Merchant) o;
-        return Objects.equals(id, merchant.id) &&
-                Objects.equals(name, merchant.name) &&
-                Objects.equals(email, merchant.email) &&
-                Objects.equals(address, merchant.address);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, name, email, address);
-    }
-
     public void setId(@Nullable Integer id) {
         this.id = id;
     }
@@ -71,4 +55,21 @@ public class Merchant {
     public String getAddress() {
         return address;
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Merchant merchant = (Merchant) o;
+        return Objects.equals(id, merchant.id) &&
+                Objects.equals(name, merchant.name) &&
+                Objects.equals(email, merchant.email) &&
+                Objects.equals(address, merchant.address);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, email, address);
+    }
+
 }
