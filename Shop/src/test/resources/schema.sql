@@ -28,3 +28,12 @@ CREATE TABLE product (
   created_at datetime NOT NULL,
   available int(11) NOT NULL
 );
+
+DROP TABLE IF EXISTS bank_account;
+CREATE TABLE bank_account (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  customer_id int(11) NOT NULL,
+   `bank_account_number` varchar(45) NOT NULL,
+  `account_balance` varchar(45) NOT NULL,
+  created_at datetime NOT NULL
+);

@@ -4,9 +4,11 @@ import com.learn2code.Shop.db.repository.ProductRepository;
 import com.learn2code.Shop.db.service.api.ProductService;
 import com.learn2code.Shop.db.service.api.request.UpdateProductRequest;
 import com.learn2code.Shop.domain.Product;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ProductServiceImpl implements ProductService {
 
     final ProductRepository productRepository;

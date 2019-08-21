@@ -13,11 +13,11 @@ public interface ProductService {
     Product get(int id);
 
     @Nullable
-    Integer add(Product product);//this method returns generated id
+    Integer add(Product product); // returns generated id
 
     void delete(int id);
 
     void update(int id, UpdateProductRequest request);
 
-
+  //  void updateAvailableInternal(int id, int newAvailable);
 }

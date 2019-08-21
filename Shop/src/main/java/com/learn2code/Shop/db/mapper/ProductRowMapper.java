@@ -8,7 +8,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class ProductRowMapper implements RowMapper<Product> {
-
     @Override
     public Product mapRow(ResultSet rs, int rowNum) throws SQLException {
         Product product = new Product();
@@ -19,6 +18,7 @@ public class ProductRowMapper implements RowMapper<Product> {
         product.setPrice(rs.getDouble("price"));
         product.setCreatedAt(rs.getTimestamp("created_at"));
         product.setAvailable(rs.getInt("available"));
+
         return product;
     }
 }
