@@ -37,3 +37,20 @@ CREATE TABLE bank_account (
   `account_balance` varchar(45) NOT NULL,
   created_at datetime NOT NULL
 );
+
+DROP TABLE IF EXISTS customer_account;
+CREATE TABLE customer_account (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  customer_id int(11) NOT NULL,
+  money double NOT NULL
+);
+
+DROP TABLE IF EXISTS bought_product;
+CREATE TABLE bought_product (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  product_id int(11) NOT NULL,
+  customer_id int(11) NOT NULL,
+  quantity int(11) NOT NULL,
+  bought_at datetime NOT NULL
+
+);
