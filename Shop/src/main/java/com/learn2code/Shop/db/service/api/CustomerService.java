@@ -12,7 +12,7 @@ public interface CustomerService {
     Customer get(int id);
 
     @Nullable
-    Integer add(Customer customer); //this method returns generated id
+    Integer add(Customer customer); // returns generated id
 
 
 }

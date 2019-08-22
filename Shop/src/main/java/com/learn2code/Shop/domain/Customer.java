@@ -21,10 +21,7 @@ public class Customer {
     @Nullable
     private String phoneNumber;
 
-    //preco je potrebne explicitne vytvorit bezparametricky konstruktor - chapem ze ked sme spravili parametricky konstruktor tak sa nam implicitne uz nevytvori bezparametricky ale naco na to neskor bude?
-    //robi sa to kvoli testom?
-    public Customer() {
-    }
+    public Customer() {}
 
     public Customer(String name, String surname, String email, String address, @Nullable Integer age, @Nullable String phoneNumber) {
         this.name = name;
@@ -40,18 +37,40 @@ public class Customer {
         return id;
     }
 
-    public String getName() { return name; }
+    public void setId(@Nullable Integer id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     public String getSurname() {
         return surname;
+    }
+
+    public void setSurname(String surname) {
+        this.surname = surname;
     }
 
     public String getEmail() {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getAddress() {
         return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     @Nullable
@@ -59,31 +78,13 @@ public class Customer {
         return age;
     }
 
-    @Nullable
-    public String getPhoneNumber() { return phoneNumber; }
-
-    public void setId(@Nullable Integer id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
     public void setAge(@Nullable Integer age) {
         this.age = age;
+    }
+
+    @Nullable
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     public void setPhoneNumber(@Nullable String phoneNumber) {

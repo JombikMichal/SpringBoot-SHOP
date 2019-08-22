@@ -8,15 +8,15 @@ public class UpdateProductRequest {
     @NonNull
     private String name;
     @NonNull
-    private String descrition;
+    private String description;
     @NonNull
     private double price;
     @NonNull
     private int available;
 
-    public UpdateProductRequest(String name, String descrition, double price, int available) {
+    public UpdateProductRequest(String name, String description, double price, int available) {
         this.name = name;
-        this.descrition = descrition;
+        this.description = description;
         this.price = price;
         this.available = available;
     }
@@ -26,7 +26,7 @@ public class UpdateProductRequest {
     }
 
     public String getDescrition() {
-        return descrition;
+        return description;
     }
 
     public double getPrice() {
@@ -45,11 +45,11 @@ public class UpdateProductRequest {
         return Double.compare(that.price, price) == 0 &&
                 available == that.available &&
                 Objects.equals(name, that.name) &&
-                Objects.equals(descrition, that.descrition);
+                Objects.equals(description, that.description);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, descrition, price, available);
+        return Objects.hash(name, description, price, available);
     }
 }

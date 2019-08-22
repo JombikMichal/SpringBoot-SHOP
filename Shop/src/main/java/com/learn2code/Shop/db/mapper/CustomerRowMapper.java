@@ -7,9 +7,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CustomerRowMapper implements RowMapper<Customer> {
-
-    //tomuto nerozumiem - zakomentovany kod som pisal ja...resp spolu s tutorialom a nesiel, aky je rozdiel medzi tymito castami kodu? padalo mi to na teste lebo objekty sa nerovnali
-    // uz tomu rozumiem...moje hlupost - staci jednu property zle settnut
     @Override
     public Customer mapRow(ResultSet rs, int rowNum) throws SQLException {
         Customer customer = new Customer();
@@ -20,7 +17,7 @@ public class CustomerRowMapper implements RowMapper<Customer> {
         customer.setAddress(rs.getString("address"));
         customer.setAge(rs.getObject("age") == null ? null : rs.getInt("age"));
         customer.setPhoneNumber(rs.getString("phone_number"));
+
         return customer;
     }
-
 }

@@ -30,4 +30,5 @@ public class CustomerServiceImpl implements CustomerService {
     public Integer add(Customer customer) {
         return customerRepository.add(customer);
     }
+
 }

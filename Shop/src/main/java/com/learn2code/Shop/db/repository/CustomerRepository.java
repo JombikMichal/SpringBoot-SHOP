@@ -24,45 +24,46 @@ public class CustomerRepository {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public Customer get(int id){
-        final String sql = "SELECT * FROM customer where customer.id = " + id;
+    public Customer get(int id) {
+        final String sql = "select * from customer where customer.id = " + id;
         try {
-            return jdbcTemplate.queryForObject(sql,customerRowMapper);
-        }catch (EmptyResultDataAccessException e){
+            return jdbcTemplate.queryForObject(sql, customerRowMapper);
+        } catch (EmptyResultDataAccessException e) {
             return null;
         }
     }
 
-    public Integer add(Customer customer){
-        final String sql = "INSERT INTO customer (name, surname, email, address, age, phone_number) VALUES (?,?,?,?,?,?)";
+    public Integer add(Customer customer) {
+        final String sql = "insert into customer(name,surname,email,address,age,phone_number) values (?,?,?,?,?,?)";
 
         KeyHolder keyHolder = new GeneratedKeyHolder();
         jdbcTemplate.update(new PreparedStatementCreator() {
             @Override
             public PreparedStatement createPreparedStatement(Connection con) throws SQLException {
-                PreparedStatement ps = con.prepareStatement(sql,PreparedStatement.RETURN_GENERATED_KEYS);
-                ps.setString(1,customer.getName());
-                ps.setString(2,customer.getSurname());
-                ps.setString(3,customer.getEmail());
-                ps.setString(4,customer.getAddress());
-                if(customer.getAge() != null){
-                    ps.setInt(5,customer.getAge());
-                }else {
-                    ps.setInt(5, Types.INTEGER);
+                PreparedStatement ps = con.prepareStatement(sql, PreparedStatement.RETURN_GENERATED_KEYS);
+                ps.setString(1, customer.getName());
+                ps.setString(2, customer.getSurname());
+                ps.setString(3, customer.getEmail());
+                ps.setString(4, customer.getAddress());
+                if (customer.getAge() != null) {
+                    ps.setInt(5, customer.getAge());
+                } else {
+                    ps.setNull(5, Types.INTEGER);
                 }
-                ps.setString(6,customer.getPhoneNumber());
+                ps.setString(6, customer.getPhoneNumber());
                 return ps;
             }
         }, keyHolder);
-        if(keyHolder.getKey() != null){
+
+        if (keyHolder.getKey() != null) {
             return keyHolder.getKey().intValue();
-        }else {
+        } else {
             return null;
         }
     }
 
-    public List<Customer> getAll(){
-        final String sql = "SELECT * FROM customer";
-        return jdbcTemplate.query(sql,customerRowMapper);
+    public List<Customer> getAll() {
+        final String sql = "select * from customer";
+        return jdbcTemplate.query(sql, customerRowMapper);
     }
 }
