@@ -53,6 +53,12 @@ public class DBServiceTests {
     private Customer customer;
 
     @Before
+    public void create(){
+        createCustomer();
+        createMerchant();
+    }
+
+   // @Before
     public void createMerchant() {
         if (merchant == null) {
             merchant = new Merchant("name", "email", "address");
@@ -62,9 +68,9 @@ public class DBServiceTests {
         }
     }
 
-    @Before
+   // @Before
     public void createCustomer() {
-        if (merchant == null) {
+        if (customer == null) {
             customer = new Customer("Ferko", "Mrkvicka", "emailtest", "test", 20, "xxx");
             Integer id = customerService.add(customer);
             assert id != null;
