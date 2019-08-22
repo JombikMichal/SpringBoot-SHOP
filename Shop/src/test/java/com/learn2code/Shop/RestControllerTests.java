@@ -140,37 +140,54 @@ public class RestControllerTests {
         Product returnedProduct = objectMapper.readValue(productJson,Product.class);
         Assert.assertEquals(product,returnedProduct);
 
-//        // Get all products
-//
-//        String listProduct = mockMvc.perform(get("/product")
-//                .contentType(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isOk())
-//                .andReturn().getResponse().getContentAsString();
-//
-//        List<Product> products = objectMapper.readValue(listProduct,new TypeReference<List<Product>> (){});
-//        assert products.size() == 1;
-//        Assert.assertEquals(product,products.get(0));
-//
-//        // Update product
-//        double updatePrice = product.getPrice() + 1;
-//        int updateAvailable = product.getAvailable() + 5;
-//        UpdateProductRequest updateProductRequest = new UpdateProductRequest(product.getName(), product.getDescription(), product.getPrice(),product.getAvailable());
-//
-//
-//        mockMvc.perform(patch("/product" + product.getId())
-//        .contentType(MediaType.APPLICATION_JSON)
-//        .content(objectMapper.writeValueAsString(updateAvailable)))
-//        .andExpect(status().isOk());
-//
-//        String returnedUpdateProduct = mockMvc.perform(get("/product/" + product.getId())
-//                .contentType(MediaType.APPLICATION_JSON))
-//                .andExpect(status().isOk())
-//                .andReturn().getResponse().getContentAsString();
-//
-//        Product updatedProduct = objectMapper.readValue(returnedUpdateProduct,Product.class);
-//        assert updatePrice == updatedProduct.getPrice();
-//        assert updateAvailable == updatedProduct.getAvailable();
+        // Get all products
 
+        String listProduct = mockMvc.perform(get("/product")
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
+
+        List<Product> products = objectMapper.readValue(listProduct,new TypeReference<List<Product>> (){});
+        assert products.size() == 1;
+        Assert.assertEquals(product,products.get(0));
+
+        // Update product
+        double updatePrice = product.getPrice() + 1;
+        int updateAvailable = product.getAvailable() + 5;
+        UpdateProductRequest updateProductRequest = new UpdateProductRequest(product.getName(), product.getDescription(), product.getPrice(),product.getAvailable());
+
+
+        mockMvc.perform(patch("/product" + product.getId())
+        .contentType(MediaType.APPLICATION_JSON)
+        .content(objectMapper.writeValueAsString(updateAvailable)))
+        .andExpect(status().isOk());
+
+        String returnedUpdateProduct = mockMvc.perform(get("/product/" + product.getId())
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
+
+        Product updatedProduct = objectMapper.readValue(returnedUpdateProduct,Product.class);
+        assert updatePrice == updatedProduct.getPrice();
+        assert updateAvailable == updatedProduct.getAvailable();
+
+        // Delete product
+        mockMvc.perform(delete("/product/" + product.getId())
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk());
+
+        mockMvc.perform(get("/product/" + product.getId())
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isNotFound());
+
+        String listProductAftetDelete = mockMvc.perform(get("/product/" + product.getId())
+                .contentType(MediaType.APPLICATION_JSON))
+                .andExpect(status().isOk())
+                .andReturn().getResponse().getContentAsString();
+
+        List<Product> productListAfterDelete = objectMapper.readValue(listProductAftetDelete,new TypeReference<List<Product>>(){});
+
+        assert productListAfterDelete.size() == 0;
 
     }
 
