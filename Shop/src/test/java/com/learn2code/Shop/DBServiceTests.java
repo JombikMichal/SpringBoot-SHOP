@@ -50,6 +50,7 @@ public class DBServiceTests {
     private ProductService productService;
 
     private Merchant merchant;
+    private Customer customer;
 
     @Before
     public void createMerchant() {
@@ -61,14 +62,24 @@ public class DBServiceTests {
         }
     }
 
+    @Before
+    public void createCustomer() {
+        if (merchant == null) {
+            customer = new Customer("Ferko", "Mrkvicka", "emailtest", "test", 20, "xxx");
+            Integer id = customerService.add(customer);
+            assert id != null;
+            customer.setId(id);
+        }
+    }
+
     @Test
     public void customer() {
-        Customer customer = new Customer("Ferko", "Mrkvicka", "emailtest", "test", 20, "xxx");
-        Integer id = customerService.add(customer);
-        assert id != null;
-        customer.setId(id);
+//        Customer customer = new Customer("Ferko", "Mrkvicka", "emailtest", "test", 20, "xxx");
+//        Integer id = customerService.add(customer);
+//        assert id != null;
+//        customer.setId(id);
 
-        Customer fromDb = customerService.get(id);
+        Customer fromDb = customerService.get(customer.getId());
         Assert.assertEquals(customer, fromDb);
 
         List<Customer> customers = customerService.getCustomers();
