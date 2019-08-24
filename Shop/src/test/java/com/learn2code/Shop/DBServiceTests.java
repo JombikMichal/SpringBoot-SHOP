@@ -49,8 +49,8 @@ public class DBServiceTests {
     @Autowired
     private ProductService productService;
 
-    private Merchant merchant;
-    private Customer customer;
+    private static Merchant merchant;
+    private static Customer customer;
 
     @Before
     public void create(){

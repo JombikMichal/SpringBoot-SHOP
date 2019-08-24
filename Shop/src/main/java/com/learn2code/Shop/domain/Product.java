@@ -91,8 +91,6 @@ public class Product {
         return available;
     }
 
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -104,7 +102,7 @@ public class Product {
                 Objects.equals(id, product.id) &&
                 Objects.equals(name, product.name) &&
                 Objects.equals(description, product.description) &&
-                Objects.equals(createdAt, product.createdAt);
+                createdAt.getTime() == product.createdAt.getTime();
     }
 
     @Override

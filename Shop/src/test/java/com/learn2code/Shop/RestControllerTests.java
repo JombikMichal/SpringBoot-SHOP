@@ -35,7 +35,7 @@ public class RestControllerTests {
     private MockMvc mockMvc;
 
     private final ObjectMapper objectMapper = new ObjectMapper();
-    private Merchant merchant;
+    private static Merchant merchant;
 
     @Before
     public void createMerchant() throws Exception   {
@@ -122,7 +122,9 @@ public class RestControllerTests {
     @Test
     public void product() throws Exception{
         // Add producy
+        System.out.println(merchant.getId());
         Product product = new Product(merchant.getId(), "name", "description", 5, 1);
+        //System.out.println(product.getMerchant_id(), product.getName());
 
         String id = mockMvc.perform(post("/product")
                 .contentType(MediaType.APPLICATION_JSON)
