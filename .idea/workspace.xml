@@ -2,26 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9826d799-1a21-426a-9b28-8717f908402c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/controller/BoughtProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/controller/ShoppingController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/repository/BoughtProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/api/BoughtProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/api/ShoppingService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/api/request/BuyProductRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/api/response/BuyProductResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/impl/BoughtProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/impl/ShoppingServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/controller/CustomerController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/mapper/BoughtProductRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/mapper/BoughtProductRowMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/repository/CustomerAccountRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/repository/CustomerAccountRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/api/CustomerAccountService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/api/CustomerAccountService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/api/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/api/ProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/impl/CustomerAccountServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/impl/CustomerAccountServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/db/service/impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/domain/BoughtProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/domain/BoughtProduct.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/domain/CustomerAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/domain/CustomerAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Shop/src/test/java/com/learn2code/Shop/RestControllerTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Shop/src/test/java/com/learn2code/Shop/RestControllerTests.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +51,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Shop/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="465">
+            <state relative-caret-position="554">
               <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="31" />
             </state>
           </provider>
@@ -95,17 +77,17 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="180" />
-    <option name="y" value="127" />
-    <option name="width" value="1080" />
-    <option name="height" value="624" />
+    <option name="x" value="-1920" />
+    <option name="y" value="23" />
+    <option name="width" value="1920" />
+    <option name="height" value="1004" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,7 +200,7 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -256,10 +238,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="831" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1920" y="23" width="1920" height="1004" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26680973" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20127796" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -308,13 +289,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Shop/src/test/java/com/learn2code/Shop/RestControllerTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Shop/src/main/java/com/learn2code/Shop/ShopApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="45">
@@ -322,9 +296,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Shop/src/test/java/com/learn2code/Shop/RestControllerTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Shop/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
+        <state relative-caret-position="554">
           <caret line="45" column="12" selection-start-line="45" selection-start-column="12" selection-end-line="45" selection-end-column="31" />
         </state>
       </provider>
